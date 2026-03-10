@@ -1,17 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tela de Checkout</title>
-</head>
-<body class="min-h-screen bg-gray-200 text-gray-800 dark:bg-gray-950 dark:text-gray-100">
-    <main class="mx-auto grid max-w-5xl grid-cols-1 items-start gap-8 md:grid-cols-2">
-        <section class="space-y-6 rounded-xl bg-white p-8 shadow-lg dark:bg-ray">
-            <h2 class="text-2xl font-bold">Informações de Pagamento</h2>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body
+    class="min-h-screen bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <main
+      class="mx-auto grid max-w-5xl grid-cols-1 items-start gap-8 md:grid-cols-2"
+    >
+      <section
+        class="space-y-6 rounded-xl bg-white p-8 shadow-lg dark:bg-gray-800"
+      >
+        <h2 class="text-2xl font-bold">Informações de Pagamento</h2>
 
-            
-        </section>
-    </main>    
-</body>
+        <div>
+          <form class="space-y-4">
+            <label class="mb-1 block text-sm font-medium" for="name">
+              Nome Completo
+            </label>
+            <input
+              id="name"
+              placeholder="Nome Completo"
+              class="w-full rounded-lg border-gray-100 px-4 py-2 dark:border-gray-600 dark:bg-gray-700"
+            />
+          </form>
+        </div>
+
+        <div>
+          <form class="space-y-4">
+            <label class="mb-1 block text-sm font-medium" for="name">
+              Número do Cartão
+            </label>
+            <input
+              id="credit-card"
+              placeholder="Insira os números atrás do Cartão"
+              class="w-full rounded-lg border-gray-100 px-4 py-2 dark:border-gray-600 dark:bg-gray-700"
+            />
+          </form>
+        </div>
+
+        <div class="flex gap-4">
+          <div>
+            <form class="space-y-4">
+              <label class="mb-1 block text-sm font-medium" for="name">
+                Validade
+              </label>
+              <input
+                id="valid"
+                placeholder="MM/AA"
+                class="w-full rounded-lg border-gray-100 px-4 py-2 dark:border-gray-600 dark:bg-gray-700"
+              />
+            </form>
+          </div>
+          <div>
+            <form class="space-y-4">
+              <label class="mb-1 block text-sm font-medium" for="name">
+                CVC
+              </label>
+              <input
+                id="cvc"
+                placeholder="123"
+                class="w-full rounded-lg border-gray-100 px-4 py-2 dark:border-gray-600 dark:bg-gray-700"
+              />
+            </form>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-linear-to-r from-blue-500 to-purple-600 py-3 font-semibold text-white transition duration-300 hover:from-blue-600 hover:via-blue-400 hover:to-purple-700"
+        >
+          Finalizar Compra
+        </button>
+      </section>
+
+      <aside
+        class="space-y-6 rounded-xl bg-white p-8 shadow-lg dark:bg-gray-800"
+      >
+        <h2 class="text-2xl font-bold">Resumo do Pedido</h2>
+
+        <ul class="space-y-4">
+          <li class="flex justify-between">
+            <span>Spider-Man: Web of Shadows</span>
+            <span>R$ 32,50</span>
+          </li>
+          <li class="flex justify-between">
+            <span>Persona 4 Golden</span>
+            <span>R$ 50,00</span>
+          </li>
+          <li
+            class="flex justify-between border-t border-gray-200 pt-4 font-semibold dark:border-gray-700"
+          >
+            <span>Total</span>
+            <span>R$ 72,50</span>
+          </li>
+        </ul>
+
+        <p class="text-sm text-center text-gray-500 dark:text-gray-400">
+          Todos os pagamentos são processados com segurança. Seus dados estão
+          protegidos.
+        </p>
+      </aside>
+    </main>
+  </body>
 </html>
